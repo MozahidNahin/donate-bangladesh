@@ -52,12 +52,12 @@
     <main>
         <!-- Feature Buttons -->
          <section class="flex justify-center gap-3 mt-14">
-            <button class="btn btn-outline border-gray-400">Donation</button>
-            <button class="btn btn-outline border-gray-400">History</button>
+            <button id="donation-btn" class="btn btn-outline border-gray-400">Donation</button>
+            <button id="history-btn" class="btn btn-outline border-gray-400">History</button>
          </section>
 
          <!-- Donation Options -->
-          <section class="md:container lg:px-28 mt-10">
+          <section id="donation-option" class="md:container lg:px-28 mt-10">
             <!-- Card 1 -->
             <div class="grid grid-cols-2 gap-4 border p-4 rounded-xl items-center mb-8">
                 <!-- image -->
@@ -102,10 +102,17 @@
             </div>
 
           </section>
+          <!-- Donation history section -->
+          <section id="donation-history" class="md:container lg:px-28 mt-10 text-center hidden">
+            <h1 class="text-xl font-bold">My Donation History</h1>
+            <div></div>
+          </section>
     </main>
     <footer class="bg-softCream py-16 mt-20"></footer>
     
     <!-- JavaScript Link-->
+     <script src="js/utilities.js"></script>
+     <script src="js/feature.js"></script>
      <script src="js/blog.js"></script>
 </body>
 </html>
