@@ -36,6 +36,12 @@
             font-family: "Lexend", sans-serif;
             font-optical-sizing: auto;
         }
+        .pop{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
      </style>
 </head>
 <body class="lexend-normal">
@@ -109,6 +115,14 @@
                 
             </div>
           </section>
+          <!-- popup -->
+           <div id="pop-up" class="flex flex-col items-center sticky space-y-3 border px-8 py-8 w-[400px] bg-white shadow-lg rounded-xl pop hidden">
+            <h3 class="text-3xl font-bold">Congrats!</h3>
+            <img src="images/coin.png" alt="" class="w-10">
+            <p>You have Donated for Humankind</p>
+            <p class="text-xl font-bold">successfully</p>
+            <button id="close-popup" class="btn">close confirmation</button>
+           </div>
     </main>
     <footer class="bg-softCream py-16 mt-20"></footer>
     
