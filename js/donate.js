@@ -6,12 +6,21 @@ document.getElementById('noakhali-donate').addEventListener('click',function(eve
     const donation = getTextFieldValueById('noakhali-donation-balance');
     const totalMoney = getTextFieldValueById('account-balance');
 
-    if(donateMoney > 0){
+    if(donateMoney > 0 && totalMoney >= donateMoney){
         const donationBalance = donation + donateMoney;
     document.getElementById('noakhali-donation-balance').innerText = donationBalance;
 
     const donatedMoney = totalMoney - donateMoney;
     document.getElementById('account-balance').innerText = donatedMoney;
+
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="border px-5 py-5 rounded-lg bg-white shadow-md space-y-2">
+                    <p class="text-xl font-semibold text-start">${donateMoney} Taka is Donated for Flood Rescue at Noakhali, Bangladesh</p>
+                    <p class="text-md text-start">${new Date().toDateString()}, ${new Date().toTimeString()}</p>
+                </div>`
+
+    document.getElementById('history-container').appendChild(div); 
+    
     }
     else{
         alert('Failed donation!')
@@ -26,12 +35,21 @@ document.getElementById('feni-donate').addEventListener('click',function(event){
     const donation = getTextFieldValueById('feni-donation-balance');
     const totalMoney = getTextFieldValueById('account-balance');
 
-    if(donateMoney > 0){
+    if(donateMoney > 0 && totalMoney >= donateMoney){
         const donationBalance = donation + donateMoney;
     document.getElementById('feni-donation-balance').innerText = donationBalance;
 
     const donatedMoney = totalMoney - donateMoney;
     document.getElementById('account-balance').innerText = donatedMoney;
+
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="border px-5 py-5 rounded-lg bg-white shadow-md space-y-2">
+                    <p class="text-xl font-semibold text-start">${donateMoney} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+                    <p class="text-md text-start">${new Date().toDateString()}, ${new Date().toTimeString()}</p>
+                </div>`
+
+    document.getElementById('history-container').appendChild(div); 
+
     }
     else{
         alert('Failed donation!')
@@ -46,12 +64,21 @@ document.getElementById('quota-donate').addEventListener('click',function(event)
     const donation = getTextFieldValueById('quota-donation-balance');
     const totalMoney = getTextFieldValueById('account-balance');
 
-    if(donateMoney > 0){
+    if(donateMoney > 0 && totalMoney >= donateMoney){
         const donationBalance = donation + donateMoney;
     document.getElementById('quota-donation-balance').innerText = donationBalance;
 
     const donatedMoney = totalMoney - donateMoney;
     document.getElementById('account-balance').innerText = donatedMoney;
+
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="border px-5 py-5 rounded-lg bg-white shadow-md space-y-2">
+                    <p class="text-xl font-semibold text-start">${donateMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+                    <p class="text-md text-start">${new Date().toDateString()}, ${new Date().toTimeString()}</p>
+                </div>`
+
+    document.getElementById('history-container').appendChild(div); 
+
     }
     else{
         alert('Failed donation!')
