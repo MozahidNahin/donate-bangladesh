@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <title>blog</title>
+
+    <!-- GoogleFonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind & Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Sheet -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                btngreen: '#B4F461',
+                softCream: 'rgb(239, 231, 218, 0.40)',
+              }
+            }
+          }
+        }
+      </script>
+
+    <!-- Style Sheet -->
+    <style>
+        .lexend-normal {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+        }
+     </style>
+</head>
+<body class="lexend-normal">
+    <header class="bg-softCream py-6">
+        <nav class="flex justify-between md:container lg:px-20">
+            <button id="home-btn" class="btn bg-btngreen text-xl font-semibold">Home</button>
+            <div class="flex justify-between items-center gap-3">
+                <img src="images/logo.png" alt=""><h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex justify-between items-center gap-3">
+                <img src="images/coin.png" alt=""><p class="text-xl"><span>5500</span> <span>BDT</span></p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="md:container lg:px-20 space-y-4 mt-14">
+            <h2 class="text-3xl font-bold flex">Important FAQ <img src="images/q-and-a.gif" alt="" class="w-10"></h2>
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>Write your answer here.</p>
+                </div>
+              </div>
+
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>Write your answer here.</p>
+                </div>
+              </div>
+
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">What is the event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Write your answer here.</p>
+                </div>
+              </div>
+
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>Write your answer here.</p>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer class="bg-softCream py-16 mt-32"></footer>
+
+    <!-- JavaScript Link -->
+    <script>
+      document.getElementById('home-btn').addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('home button clicked')
+        window.location.href = '/index.html';
+      })
+    </script>
+</body>
+</html>
